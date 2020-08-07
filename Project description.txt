@@ -1,0 +1,30 @@
+Create a project directory using mkdir project
+In project directory--
+1.Create the virtual environment.
+ python -m venv myvenv
+ To start the myvenv - myvenv\Scripts\activate
+2.Upgrade to the newest version of pip.
+ (myvenv) ~$ python -m pip install --upgrade pip
+3.Install Django
+ 3.1 Make a requirements.txt (in project directory) and write Django~=2.0.6 in it. Then install Django by using the command pip install -r requirements.txt
+4.To create a new project, write django-admin.exe startproject mysite . Now some python will be automatically made which should not be renamed or moved.
+5.In the project,after using above command, a manage.py and mysite folder will be made automatically
+6.manage.py is a script that helps with management of the site. The settings.py file contains the configuration of your website.
+7.Do some changes in settings.py like setting the timezone,language,databse,allowed hosts etc.
+8.To create the databse,write python manage.py migrate to the cmd.   ????
+9.Create a new application using the command python manage.py startapp <appname>
+10.In settings.py add your appname at the end in installed_apps block so that Django knows to use it.
+11.Now make changes in models.py to define the models which the app is using and tell the Django the changes made using command- python manage.py makemigrations blog.
+12.To add the changes made in models.py to the project,use Django admin. It makes the models visible to admin.
+13.Go to mysite/urls.py and add the functionalities to make the homepage for the project and create its url.
+ 13.1 Make a new file called urls.py in the project folder and add path of your views and url patterns to give it access.
+14.Create views in the project, it helps in requesting information from the model and pass it to the template.
+15.Now create templates to re-use present information in a consistent format. It is made in html.
+16.Create a forms.py file and design and add the interface and all the functionalities for the project.
+17.Make changes in the forms.py and views.py to run the project properly.
+18. Do the changes according to your project and its done.
+
+
+To run the project:
+python manage.py runserver
+python manage.py migrate myapp
